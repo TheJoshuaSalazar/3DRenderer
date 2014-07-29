@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F348FB3C-4D24-4CE7-B7C3-96608A6ADD79}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CompleteScene</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(Configuration)\Temps\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\ExternalDependencies\Qt\include;$(SolutionDir)..\..\ExternalDependencies\NeumontTools\include;$(SolutionDir)..\..\ExternalDependencies\glm;$(SolutionDir)..\..\ExternalDependencies\glew\include;$(SolutionDir)..\..\ExternalDependencies\Engine;$(SolutionDir)..\..\ExternalDependencies\DebugEngine;$(SolutionDir)..\..\ExternalDependencies\LibNoise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\ExternalDependencies\DebugEngine\$(Configuration);$(SolutionDir)..\..\ExternalDependencies\Qt\lib;$(SolutionDir)..\..\ExternalDependencies\Engine\$(Configuration);$(SolutionDir)..\..\ExternalDependencies\glew\lib;$(SolutionDir)..\..\ExternalDependencies\NeumontTools\lib;$(SolutionDir)..\..\ExternalDependencies\LibNoise\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libnoise.lib;openGL32.lib;glew32.lib;QtGuid4.lib;QtCored4.lib;QtOpenGLd4.lib;DebugEngine.lib;Engine.lib;NeumontTools.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>erase "$(OutDir)DebugEngine.dll"
+erase "$(OutDir)Engine.dll"
+copy "$(SolutionDir)..\..\ExternalDependencies\DebugEngine\$(Configuration)\DebugEngine.dll" "$(OutDir)"
+copy "$(SolutionDir)..\..\ExternalDependencies\Engine\$(Configuration)\Engine.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="GLWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GLWindow.cpp" />
+    <ClCompile Include="GLWindow_moc.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DepthFrag.sh" />
+    <None Include="DepthVertex.sh" />
+    <None Include="DirectionalFrag.sh" />
+    <None Include="DirectionalVertex.sh" />
+    <None Include="DisintegrationFrag.sh" />
+    <None Include="DisintegrationVertex.sh" />
+    <None Include="DisplacementFrag.sh" />
+    <None Include="DisplacementVertex.sh" />
+    <None Include="EnvironmentMapFrag.sh" />
+    <None Include="EnvironmentMapVertex.sh" />
+    <None Include="ShadowMappingFrag.sh" />
+    <None Include="ShadowMappingVertex.sh" />
+    <None Include="SkyBoxFrag.sh" />
+    <None Include="SkyBoxVertex.sh" />
+    <None Include="Werewolf.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Blue.png" />
+    <Image Include="negx.png" />
+    <Image Include="negy.png" />
+    <Image Include="negz.png" />
+    <Image Include="orgeDiffuse.png" />
+    <Image Include="orgeNormalmap.png" />
+    <Image Include="posx.png" />
+    <Image Include="posy.png" />
+    <Image Include="posz.png" />
+    <Image Include="RugNormal.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
