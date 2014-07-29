@@ -1,0 +1,29 @@
+﻿Build started 7/14/2014 11:13:27 PM.
+     1>Project "C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\DebugEngine.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\Engine" /I"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\NeumontTools\include" /I"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\glew\include" /I"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\glm" /I"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\Qt\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\obj\\" /Fd"Debug\obj\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DebugDualScreen.cpp DebugMenu.cpp DebugShapes.cpp Logger.cpp
+         Logger.cpp
+         DebugShapes.cpp
+         DebugMenu.cpp
+         DebugDualScreen.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\Engine\Debug" /LIBPATH:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\glew\lib" /LIBPATH:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\NeumontTools\lib" /LIBPATH:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\Qt\lib" glew32.lib QtCored4.lib QtGuid4.lib QtOpenGLd4.lib odbccp32.lib openGL32.lib NeumontTools.lib Engine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\obj\DebugEngine.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.lib" /MACHINE:X86 /DLL Debug\obj\DebugDualScreen.obj
+         Debug\obj\DebugMenu.obj
+         Debug\obj\DebugShapes.obj
+         Debug\obj\Logger.obj
+     1>DebugDualScreen.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+            Creating library C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.lib and object C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.exp
+         DebugEngine.vcxproj -> C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\DebugEngine.dll;#2" /manifest Debug\obj\DebugEngine.dll.intermediate.manifest
+       PostBuildEvent:
+         erase "C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\Engine.dll" 
+         copy "C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\03 Computer Graphics\CompleteScene\..\..\ExternalDependencies\Engine\Debug\Engine.dll" "C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\Debug\"
+         :VCEnd
+                 1 file(s) copied.
+     1>Done Building Project "C:\Users\JSalazar\Desktop\GameClass\salazar_computergraphics\ExternalDependencies\DebugEngine\DebugEngine.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.92
